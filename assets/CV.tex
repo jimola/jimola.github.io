@@ -1,0 +1,284 @@
+\documentclass[11pt]{article}
+%------------------------Dimensions--------------------------------------------
+\topmargin=0.0in %length of margin at the top of the page (1 inch added by default)
+\oddsidemargin=0.0in %length of margin on sides for odd pages
+\evensidemargin=0in %length of margin on sides for even pages
+\textwidth=6.5in %How wide you want your text to be
+\marginparwidth=0.5in
+\headheight=0pt %1in margins at top and bottom (1 inch is added to this value by default)
+\headsep=0pt %Increase to increase white space in between headers and the top of the page
+\textheight=9.0in %How tall the text body is allowed to be on each page
+\setlength\parindent{0pt}
+
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[document]{ragged2e}
+\titleformat{\section}
+    {\normalfont \Large \bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+
+\newcommand{\datewidth}{0.2\textwidth}
+\newcommand{\descwidth}{0.755\textwidth}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+\pagenumbering{gobble}
+
+%Use link for power words
+%https://hwpi.harvard.edu/files/ocs/files/undergrad_resumes_and_cover_letters.pdf
+
+\centerline{{\Huge Jacob Imola}}
+
+\section*{Contact Information}
+\begin{tabular}{rl}
+  Address: & EBU3B, 4142 \\
+           & 9500 Gilman Drive, La Jolla, CA 92092-0404 \\
+  Phone: & (303)349-8612 \\
+  Email: & \href{mailto:jimola@eng.ucsd.edu}{jimola@eng.ucsd.edu} \\
+  Website: & \url{cseweb.ucsd.edu/~jimola/}
+\end{tabular}
+
+\section*{Education}
+\begin{tabular}{rl}
+\parbox[t][][t]{\descwidth}{
+  University of California, San Diego \\
+  PhD Student in Computer Science, Expected Graduation 2024 \\
+  Advisor: Prof. Kamalika Chaudhuri \\
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft 2018-Now
+} \\
+\parbox[t][][t]{\descwidth}{
+  Carnegie Mellon University \\
+  B.S. in Computer Science, Minor in Mathematics \\
+  Advisor: Prof. Jean Yang \\
+  GPA: 3.85/4.00
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft 2014-2018
+}
+\end{tabular}
+
+\section*{Research Experience}
+\begin{tabular}{rl}
+\parbox[t][][t]{\descwidth}{
+  \textbf{PhD Research} \\
+  Differential Privacy and Other Topics in Machine Learning
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft September 2018-\\Now
+}% \\
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Local Differential Privacy and Graphs:} Created new
+    graph algorithms where each user has a list of his neighbors and 
+    applies a private mechanism locally. Combined techniques from
+    graph sampling and privacy to improve communication. See
+    \url{https://arxiv.org/abs/2110.06485} for a selected work.
+    
+  \item \textbf{Privacy Amplification via Post-Sampling:} Analyzed
+    privacy amplification, or the improvement in privacy guarantee,
+    when a private algorithm is used to learn a posterior distribution,
+    and then a sample from that distribution is released. Proved
+    lower and upper bounds on amplification for Bernoulli posterior. 
+    See \url{https://arxiv.org/abs/2105.10594} for the paper.
+
+  \item \textbf{Clustering in the Online Setting:} Developed new k-means
+    clustering algorithm where points are streamed one at a time, may be
+    arbitrary, and cannot be removed if selected. The algorithm 
+    always runs efficiently and provides a constant-factor approximation 
+    to the optimal clustering. See \url{https://arxiv.org/abs/2102.09101}
+    for the paper.
+
+  \item \textbf{Privacy in Context of Limited Adversaries:} Proposed new 
+    privacy definition that considers adversaries with capacity limitations,
+    such as a bounded function class. Proved capacity-bounded privacy satisfies
+    the familiar properties of differential privacy, and derived mechanisms for
+    it. See \url{https://arxiv.org/abs/1907.02159} for the paper.
+
+\end{itemize}
+
+\medskip
+
+\begin{tabular}{rl}
+\parbox[t][][t]{\descwidth}{
+  \textbf{Undergraduate Thesis} \\
+  Programming Languages and Differential Privacy 
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft May 2017-\\June 2018
+}% \\
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Automatic, Fine-Grained Choice for Differential Privacy:}
+  Proposed framework to automatically explore and optimize privacy-accuracy
+  frontier of differential privacy. Devised type system and runtime environment 
+  to provide abstract interface for performing the optimization.
+  Tested code on real datasets and demonstrated performance improvements.
+\end{itemize}
+
+\medskip
+
+\begin{tabular}{rl}
+\parbox[t][][t]{\descwidth}{
+  \textbf{Undergraduate Research} \\
+  Complexity Theory 
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft May 2015-\\August 2015
+}% \\
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Multiparty Communication Protocols for Symmetric Functions:} Investigated 
+    general multi-party communication protocols in which each party has a
+    string on their forehead, communicates with bits, and seeks to compute
+    a weakly symmetric function.
+    Collaborated with others to produce a catalog of questions and results.
+    Developed simulations of random boolean circuits with C++.
+\end{itemize}
+
+\section*{Work Experience}
+
+\begin{tabular}{rl}
+\parbox[t][][t]{\descwidth}{
+  \textbf{PhD Intern} \\
+  Applied Scientist at Amazon
+} &
+\parbox[t][][t]{\datewidth}{
+  \raggedleft June 2021-\\September 2021
+}% \\
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Towards an Optimal Mechanism in Metric Privacy:}
+  Formulated utility definition for textual differential privacy algorithm.
+  Applied techniques from linear programming to find new algorithm that 
+  had approx. 20\% better utility while still meeting privacy guarantees.
+  Devised heuristics to speed up algorithm and
+  improve scalability to real-world text applications.
+\end{itemize}
+
+\medskip
+
+\begin{tabular}{rl}
+  \parbox[t][][t]{\descwidth}{
+    \textbf{Summer Intern} \\
+    Quantitative Market Researcher at Jump Trading
+  } &
+  \parbox[t][][t]{\datewidth}{
+    \raggedleft June 2017-\\August 2017
+  }
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Financial Market Prediction Algorithms:}
+  Cleaned and organized data from different markets.
+  Hypothesized possible market patterns and calculated statistical significance.
+  Optimized algorithms and authored production-ready code which was used to
+  improve profits.
+\end{itemize}
+\medskip
+
+\begin{tabular}{rl}
+  \parbox[t][][t]{\descwidth}{
+    \textbf{Summer Intern} \\
+    Software Engineer at Salesforce
+  } &
+  \parbox[t][][t]{\datewidth}{
+    \raggedleft June 2016-\\August 2016
+  }
+\end{tabular}
+\begin{itemize}
+  \item \textbf{Data Quality Visualization Dashboard:}
+    Analyzed data quality of data center computer metrics.
+    Visualized data with an interactive Django website.
+    Discovered data inconsistencies which helped company identify longstanding
+    bugs.
+\end{itemize}
+
+\section*{Teaching Experience}
+\begin{tabular}{rl}
+  \parbox[t][][t]{\descwidth}{
+    \textbf{High School Research Mentor} \\
+    Summer STEM Institute 
+  } &
+  \parbox[t][][t]{\datewidth}{
+    \raggedleft June 2021-\\July 2021
+  } \medskip \\
+  \parbox[t][][t]{\descwidth}{
+    \textbf{Teaching Assistant} \\
+    CSE 151A: Introduction to AI: A Statistical Approach 
+  } &
+  \parbox[t][][t]{\datewidth}{
+    \raggedleft January 2021-\\March 2021
+  } \medskip \\
+  \parbox[t][][t]{\descwidth}{
+    \textbf{Teaching Assistant} \\
+    CSE 151A: Introduction to AI: A Statistical Approach 
+  } &
+  \parbox[t][][t]{\datewidth}{
+    \raggedleft January 2020-\\March 2020
+  }
+\end{tabular}
+
+\section*{Publications}
+  
+  \hspace{2em}
+  \vbox{
+  Communication-Efficient Triangle Counting under Local Differential Privacy
+
+  In submission; arXiv version available at
+  \url{https://arxiv.org/abs/2110.06485}
+  }
+
+  \vspace{0.5em}
+
+  \hspace{2em}
+  \vbox{
+  No-Substitution k-means Clustering with Low Center Complexity and Memory
+
+  In submission; arXiv version available at
+  \url{https://arxiv.org/abs/2102.09101}
+  }
+
+  \vspace{0.5em}
+
+  \hspace{2em}
+  \vbox{
+  Privacy Amplification Via Bernoulli Sampling
+
+  Accepted to TPDP Workshop at ICML 2021; arXiv version available at
+  \url{https://arxiv.org/abs/2105.10594}
+  }
+
+  \vspace{0.5em}
+
+  \hspace{2em}
+  \vbox{
+  Locally Differentially Private Analysis of Graph Statistics
+
+  Accepted at USENIX Security 2021; arXiv version available at
+  \url{https://arxiv.org/abs/2010.08688}
+  }
+
+  \vspace{0.5em}
+
+  \hspace{2em}
+  \vbox{
+  Capacity Bounded Differential Privacy
+
+  Accepted at NeurIPS 2019; arXiv version available at 
+  \url{https://arxiv.org/abs/1907.02159}
+  } 
+\section*{Computer Skills}
+\begin{tabular}{rl}
+  Programming Languages: & C++, Python, OCaml, Java, R, Javascript, SQL, \LaTeX \\
+  Industrial Tools: & Numpy/Scipy, Scikit-learn, Sage, React.js
+\end{tabular}
+
+\section*{Academic Honors}
+
+\begin{tabular}{rl}
+  2018 & Senior Thesis Honors Program at CMU \\
+  2016 & William Lowell Putnam Math Competition Honorable Mention \\
+  2015 & ACM-ICPC Regional Programming Competition Team Member
+\end{tabular}
+\end{document}
